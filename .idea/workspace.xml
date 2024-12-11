@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4f4f6cc9-734e-41e9-84d1-70269eb52957" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/Adapters/LocalDateAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/GSONBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/GUIStarter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/HelloApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/ServerConnection/Controllers/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/ServerConnection/Controllers/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/ServerConnection/Controllers/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/ServerConnection/Controllers/RegistrationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/ServerConnection/Controllers/StartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/ServerConnection/ServerConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/auth/LogIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/auth/Register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/models/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/models/Deposit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/models/DepositType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/models/InterestRate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/models/PersonInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/rateCalculator/CalculatorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/rateCalculator/CapitalizingRateCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/rateCalculator/InterestRateCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/frontApp/rateCalculator/NonCapitalizingRateCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Windows/AddDepositWindow/AddDepositWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Windows/LoginWindow/5dd6849cc5d218f850f31dfea93ede39-2501296892.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Windows/LoginWindow/loginwindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Windows/MainWindow/mainWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Windows/StartWindow/9e78d1015b8e9bfbd0912acc31cee9d3-842475021.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Windows/StartWindow/startwindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Windows/UserRegistration/userRegistration.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2pD2qRmswIvtbVl3Ml1r7u8efOc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Kursach2024Front/src/main/java/com/frontApp/models&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Kursach2024Front\src\main\java\com\frontApp\models" />
+      <recent name="F:\Kursach2024Front\src\main\java\com\frontApp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.GUIStarter">
+    <configuration name="GUIStarter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.frontApp.GUIStarter" />
+      <module name="Kursach2024Front" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.frontApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.frontApp.HelloApplication" />
+      <module name="Kursach2024Front" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.frontApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GUIStarter" />
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4f4f6cc9-734e-41e9-84d1-70269eb52957" name="Changes" comment="" />
+      <created>1732187795332</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732187795332</updated>
+      <workItem from="1732187797460" duration="7334000" />
+      <workItem from="1732286523130" duration="603000" />
+      <workItem from="1732287225294" duration="1257000" />
+      <workItem from="1732525626412" duration="8000" />
+      <workItem from="1732536528343" duration="278000" />
+      <workItem from="1732538319484" duration="8000" />
+      <workItem from="1732814900505" duration="65000" />
+      <workItem from="1732814982658" duration="5000" />
+      <workItem from="1733165620710" duration="12646000" />
+      <workItem from="1733478427638" duration="913000" />
+      <workItem from="1733674831115" duration="9525000" />
+      <workItem from="1733688626586" duration="16785000" />
+      <workItem from="1733829257691" duration="10812000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/frontApp/ServerConnection/Controllers/MainController.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

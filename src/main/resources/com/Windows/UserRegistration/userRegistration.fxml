@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontApp.ServerConnection.Controllers.RegistrationController">
+   <children>
+      <TextField fx:id="nameField" layoutX="27.0" layoutY="117.0" prefHeight="26.0" prefWidth="150.0" promptText="Имя" />
+      <TextField fx:id="lastNameField" layoutX="200.0" layoutY="117.0" prefHeight="26.0" prefWidth="160.0" promptText="Фамилия" />
+      <TextField fx:id="middleNameField" layoutX="27.0" layoutY="171.0" prefHeight="26.0" prefWidth="149.0" promptText="Отчество" />
+      <TextField fx:id="telephoneField" layoutX="27.0" layoutY="230.0" prefHeight="26.0" prefWidth="149.0" promptText="Телефон" />
+      <DatePicker fx:id="birthDate" layoutX="29.0" layoutY="277.0" prefHeight="26.0" prefWidth="151.0" promptText="Дата рождения" />
+      <TextField fx:id="mailField" layoutX="30.0" layoutY="331.0" promptText="E-mail" />
+      <Button fx:id="sendButton" layoutX="31.0" layoutY="500.0" mnemonicParsing="false" onAction="#onSendRegistration" text="Зарегистрироваться">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="backButton" layoutX="290.0" layoutY="500.0" mnemonicParsing="false" onAction="#onCloseRegistration" text="Назад">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="110.0" layoutY="34.0" text="Регистрация ">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="LoginText" layoutX="205.0" layoutY="277.0" prefHeight="26.0" prefWidth="160.0" promptText="Логин" />
+      <PasswordField fx:id="passwordField" layoutX="30.0" layoutY="382.0" promptText="Введите пароль" />
+      <PasswordField fx:id="doublePassword" layoutX="27.0" layoutY="436.0" promptText="Повторите пароль" />
+      <ComboBox fx:id="userRoleBox" layoutX="205.0" layoutY="231.0" prefWidth="150.0" promptText="Роль" />
+   </children>
+</AnchorPane>
