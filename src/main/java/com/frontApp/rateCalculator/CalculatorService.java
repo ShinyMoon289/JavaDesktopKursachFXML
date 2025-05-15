@@ -8,12 +8,12 @@ public class CalculatorService {
 
 	private int years;
 
-	private int sum;
+	private double sum;
 
 	private double rate;
 
 	public CalculatorService(){	}
-	public CalculatorService(InterestRateCalculator calc, int years,int sum,double rate){
+	public CalculatorService(InterestRateCalculator calc, int years,double sum,double rate){
 		this.calculator=calc;
 		this.rate=rate;
 		this.sum=sum;
@@ -39,11 +39,11 @@ public class CalculatorService {
 		this.years = years;
 	}
 
-	public int getSum() {
+	public double getSum() {
 		return sum;
 	}
 
-	public void setSum(int sum) {
+	public void setSum(double sum) {
 		this.sum = sum;
 	}
 

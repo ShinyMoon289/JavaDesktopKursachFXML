@@ -52,9 +52,10 @@ public class LoginController {
 			conn.sendMessage(loginField.getText());
 			conn.sendMessage(Register.encrypt(passwordField.getText()));
 			System.out.println(passwordField.getText());
+			try {
+			String returncomm=conn.getServerMessage();
+			if(returncomm.equals("ok")){
 
-			if(conn.getServerMessage().equals("ok")){
-				try {
 					LogIn.loggedUser=gson.fromJson(conn.getServerMessage(), User.class);
 
 					System.out.println("ok");
@@ -82,10 +83,16 @@ public class LoginController {
 						thisStage.close();
 					}
 
-				}catch(Exception ex){
-					ex.printStackTrace();
-				}
 
+
+			}else if(returncomm.equals("notfound")){
+				Alert emptyAlert = new Alert(Alert.AlertType.ERROR,"Неверный логин или пароль!");
+				emptyAlert.showAndWait();
+			}
+			}catch(Exception ex){
+				ex.printStackTrace();
+				Alert emptyAlert = new Alert(Alert.AlertType.ERROR,"Ошибка сервера");
+				emptyAlert.showAndWait();
 			}
 
 

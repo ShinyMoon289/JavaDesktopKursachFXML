@@ -5,35 +5,53 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="355.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontApp.ServerConnection.Controllers.AddDepositController">
    <children>
-      <Label layoutX="35.0" layoutY="14.0" text="Оформление нового вклада">
+      <Label layoutX="87.0" layoutY="14.0" text="Оформление нового вклада">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <ComboBox fx:id="rateList" layoutX="170.0" layoutY="74.0" onAction="#loadRateDetail" prefHeight="26.0" prefWidth="146.0" promptText="План" />
-      <Label layoutX="14.0" layoutY="79.0" text="План процентной ставки" />
+      <Label layoutX="148.0" layoutY="59.0" text="План процентной ставки" />
       <Label layoutX="28.0" layoutY="250.0" text="Стартовая сумма" />
-      <CheckBox fx:id="insureanceValue" layoutX="154.0" layoutY="465.0" mnemonicParsing="false" text="Страхование вклада" />
-      <TextField fx:id="rateValue" layoutX="71.0" layoutY="120.0" mouseTransparent="true" prefHeight="26.0" prefWidth="146.0" />
-      <Label layoutX="20.0" layoutY="125.0" text="Ставка" />
-      <CheckBox fx:id="fixedValue" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" mouseTransparent="true" text="Фиксированный процент" />
+      <CheckBox fx:id="insuranceCheck" layoutX="25.0" layoutY="449.0" mnemonicParsing="false" text="Страхование вклада">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
       <Slider fx:id="sumScroller" layoutX="176.0" layoutY="252.0" max="1000000.0" min="1000.0" showTickLabels="true" />
       <Label fx:id="sumCounter" layoutX="229.0" layoutY="268.0" text="рублей" />
-      <Button fx:id="confirmButton" layoutX="86.0" layoutY="512.0" mnemonicParsing="false" onAction="#sendDeposit" text="Оформить" />
-      <Button fx:id="cancelButton" layoutX="235.0" layoutY="511.0" mnemonicParsing="false" onAction="#closeNewDeposit" prefHeight="26.0" prefWidth="74.0" text="Отмена" />
-      <CheckBox fx:id="endMonthValue" layoutX="20.0" layoutY="167.0" mnemonicParsing="false" mouseTransparent="true" text="Начисление в конце месяца" />
+      <Button fx:id="confirmButton" layoutX="23.0" layoutY="524.0" mnemonicParsing="false" onAction="#sendDeposit" text="Подать заявку">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="cancelButton" layoutX="217.0" layoutY="523.0" mnemonicParsing="false" onAction="#cancelDeposit" prefHeight="37.0" prefWidth="117.0" text="Отмена">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
       <Label layoutX="28.0" layoutY="293.0" text="Длительность вклада" />
-      <Slider blockIncrement="2.0" layoutX="176.0" layoutY="295.0" max="20.0" min="4.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="4.0" />
-      <ComboBox fx:id="currencyCheck" layoutX="174.0" layoutY="340.0" prefHeight="26.0" prefWidth="138.0" promptText="Валюта" />
-      <CheckBox layoutX="159.0" layoutY="406.0" mnemonicParsing="false" text="Востребованный вклад" />
-      <CheckBox layoutX="160.0" layoutY="432.0" mnemonicParsing="false" text="С капитализацией" />
+      <Slider fx:id="durationScroller" blockIncrement="2.0" layoutX="176.0" layoutY="295.0" max="20.0" min="4.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="4.0" />
+      <ComboBox fx:id="currencyCheck" layoutX="308.0" layoutY="333.0" prefHeight="26.0" prefWidth="138.0" promptText="Валюта" />
+      <CheckBox fx:id="withdrawCheck" layoutX="25.0" layoutY="377.0" mnemonicParsing="false" text="Востребованный вклад">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="capCheck" layoutX="25.0" layoutY="414.0" mnemonicParsing="false" text="С капитализацией">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
       <Label fx:id="yearCounter" layoutX="237.0" layoutY="314.0" text="лет" />
+      <TableView fx:id="rateTable" layoutX="13.0" layoutY="77.0" prefHeight="160.0" prefWidth="433.0">
+        <columns>
+          <TableColumn fx:id="rateNameCol" prefWidth="75.0" text="План" />
+          <TableColumn fx:id="rateValueCol" prefWidth="71.20001220703125" text="Ставка,%" />
+            <TableColumn fx:id="rateFixedCol" prefWidth="96.0" text="Фиксированная" />
+            <TableColumn fx:id="rateEndmonthCol" prefWidth="172.0" text="Начисление в конце месяца" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

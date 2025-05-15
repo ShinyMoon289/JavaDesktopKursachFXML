@@ -54,7 +54,8 @@ public class RegistrationController {
 		if(LogIn.loggedUser==null||!LogIn.loggedUser.getRole().equals("admin")){
 			userRoleBox.setDisable(true);
 		}else{
-
+			userRoleBox.setDisable(false);
+			userRoleBox.getItems().addAll("admin","client","manager");
 		}
 	}
 	@FXML
@@ -99,7 +100,6 @@ public class RegistrationController {
 			Account account = new Account();
 			account.setUser(new User());
 			account.getUser().setInfo(new PersonInfo());
-
 			account.getUser().setLogin(LoginText.getText());
 			account.getUser().setPasswordHash(Register.encrypt(passwordField.getText()));
 			account.getUser().setRole("client");

@@ -5,22 +5,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.ColorAdjust?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontApp.ServerConnection.Controllers.LoginController">
    <children>
-      <ImageView fitHeight="434.0" fitWidth="568.0" layoutX="-116.0" layoutY="-2.0" preserveRatio="true">
-         <image>
-            <Image url="@5dd6849cc5d218f850f31dfea93ede39-2501296892.jpg" />
-         </image>
-         <effect>
-            <ColorAdjust brightness="-0.58" />
-         </effect>
-      </ImageView>
       <TextField fx:id="loginField" layoutX="75.0" layoutY="148.0" promptText="Логин">
          <font>
             <Font size="15.0" />
@@ -41,7 +30,7 @@
             <Font size="14.0" />
          </font>
       </Hyperlink>
-      <Label layoutX="83.0" layoutY="40.0" text="Вход в банкинг" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+      <Label layoutX="83.0" layoutY="40.0" text="Вход в банкинг" textAlignment="CENTER" textOverrun="CLIP">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

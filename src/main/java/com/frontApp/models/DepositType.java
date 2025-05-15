@@ -18,7 +18,15 @@ public class DepositType {
 	private boolean insurance;
 
 	private InterestRate rate;
+	private boolean withdraw;
 
+	public boolean isWithdraw() {
+		return withdraw;
+	}
+
+	public void setWithdraw(boolean withdraw) {
+		this.withdraw = withdraw;
+	}
 
 	public int getId() {
 		return id;

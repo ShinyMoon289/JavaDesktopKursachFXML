@@ -15,6 +15,15 @@ public class Deposit {
 
 	private DepositType type;
 
+	public Deposit(){}
+
+	public Deposit(int id, double money, Account account, String requisits, DepositType type) {
+		this.id = id;
+		this.money = money;
+		this.account = account;
+		this.requisits = requisits;
+		this.type = type;
+	}
 
 	public int getId() {
 		return id;

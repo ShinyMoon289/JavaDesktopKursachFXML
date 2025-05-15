@@ -46,14 +46,16 @@ public class StartController {
 				stage.show();
 			}
 
+		}else{
+			FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/Windows/LoginWindow/loginwindow.fxml"));
+			Stage stage = new Stage();
+			Scene regScene = new Scene(fxmlLoader.load());
+			stage.setScene(regScene);
+			stage.setTitle("Вход");
+			stage.setResizable(false);
+			stage.show();
 		}
-		FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/Windows/LoginWindow/loginwindow.fxml"));
-		Stage stage = new Stage();
-		Scene regScene = new Scene(fxmlLoader.load());
-		stage.setScene(regScene);
-		stage.setTitle("Вход");
-		stage.setResizable(false);
-		stage.show();
+
 
 	}
 

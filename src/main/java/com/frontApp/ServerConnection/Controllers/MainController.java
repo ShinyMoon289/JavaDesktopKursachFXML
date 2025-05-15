@@ -2,6 +2,9 @@ package com.frontApp.ServerConnection.Controllers;
 
 import com.frontApp.Adapters.LocalDateAdapter;
 import com.frontApp.GSONBuilder;
+import com.frontApp.HelloApplication;
+import com.frontApp.ServerConnection.Controllers.Props.DepositProp;
+import com.frontApp.ServerConnection.Controllers.Props.RateProp;
 import com.frontApp.ServerConnection.ServerConnection;
 import com.frontApp.auth.LogIn;
 import com.frontApp.models.Deposit;
@@ -14,10 +17,12 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -35,7 +40,6 @@ public class MainController{
 	public TextField newPassword;
 	public Button sendInfoButton;
 	public Button cancelInfoButton;
-	public ListView depositList;
 
 	@FXML
 	private Label greetingText;
@@ -50,18 +54,73 @@ public class MainController{
 
 	@FXML
 	private TextField newMail;
-	
-	
 
 
 	@FXML
-	public void onInit(Event event)throws IOException {
+	private TableView<DepositProp> depositTable;
 
+	@FXML
+	private TableColumn<DepositProp,Integer> depositIdCol;
+
+	@FXML
+	private TableColumn<DepositProp,String> depositRequisitsCol;
+
+	@FXML
+	private TableColumn<DepositProp,Integer> depositDurationCol;
+
+	@FXML
+	private TableColumn<DepositProp,String> depositCurrencyCol;
+
+	@FXML
+	private TableColumn<DepositProp,Boolean>depositWithdrawCol;
+
+	@FXML
+	private TableColumn<RateProp,Double>depositRateCol;
+
+	@FXML
+	private TableColumn<DepositProp,Boolean>depositCapCol;
+
+	@FXML
+	private TableColumn<DepositProp,Boolean>depositInsuredCol;
+
+	@FXML
+	private TableColumn<DepositProp,Boolean>depositFixedCol;
+
+	@FXML
+	private TableColumn<DepositProp,Boolean>depositEndmonthCol;
+
+
+
+	
+
+	@FXML
+	public void addDeposit(ActionEvent event)throws IOException{
+		FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/Windows/AddDepositWindow/AddDepositWindow.fxml"));
+		Stage stage = new Stage();
+		Scene regScene = new Scene(fxmlLoader.load());
+		stage.setScene(regScene);
+		stage.setTitle("Оформление вклада");
+		stage.setResizable(false);
+		stage.show();
 	}
 
 	@FXML
-	public void OnInit(Event event)throws IOException{
+	public void openCalculator(ActionEvent event)throws IOException{
+		FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/Windows/Calculator/Calculator.fxml"));
+		Stage stage = new Stage();
+		Scene regScene = new Scene(fxmlLoader.load());
+		stage.setScene(regScene);
+		stage.setTitle("Финансовый калькулятор");
+		stage.setResizable(false);
+		stage.show();
+	}
 
+	@FXML
+	public void exitAccount(ActionEvent event){
+		LogIn.loggedUser=null;
+		final Node source = (Node)event.getSource();
+		final Stage stage = (Stage)source.getScene().getWindow();
+		stage.close();
 	}
 	@FXML
 	public void initialize()throws IOException{
@@ -79,12 +138,10 @@ public class MainController{
 		if(LogIn.loggedUser.getInfo().getMiddleName()==null||!LogIn.loggedUser.getInfo().getMiddleName().isBlank()){
 			newMiddleName.setText(LogIn.loggedUser.getInfo().getMiddleName());
 		}
-		depositList =new ListView<String> ();
 
 		try{
-			conn.sendMessage("getdeposits");
-			conn.sendMessage(gson.toJson(LogIn.loggedUser,User.class));
-			TypeToken<ArrayList<Deposit>> token = new TypeToken<ArrayList<Deposit>>(){};
+			conn.sendMessage("getalldeposits");
+			TypeToken<ArrayList<Deposit>> token = new TypeToken<>(){};
 			String message = conn.getServerMessage();
 			if(message==null){
 
@@ -92,11 +149,38 @@ public class MainController{
 			else{
 				ArrayList<Deposit> getList =gson.fromJson(message, token);
 				if(getList!=null){
-					ObservableList<String> list= FXCollections.observableArrayList();
+					ObservableList<DepositProp> depositList= FXCollections.observableArrayList();
+					depositTable.setItems(depositList);
 					for(Deposit dep:getList){
-						list.add(dep.getId()+": "+dep.getRequisits());
+						if(dep.getAccount().getUser().getId()==LogIn.loggedUser.getId()){
+							DepositProp prop = new DepositProp(dep.getId(),
+									" ",
+									dep.getRequisits(),
+									dep.getType().getDuration(),
+									dep.getType().getCurrency(),
+									dep.getType().isWithdraw(),
+									dep.getType().isInsurance(),
+									dep.getType().getRate().getId(),
+									dep.getType().isCapitalizing());
+							prop.setRateValue(dep.getType().getRate().getRate()*100);
+							prop.setFixed(dep.getType().getRate().isFixed());
+							depositList.add(prop);
+						}
+
+
 					}
-					depositList.setItems(list);
+
+					depositIdCol.setCellValueFactory(new PropertyValueFactory<>("id"));
+					depositCurrencyCol.setCellValueFactory(new PropertyValueFactory<>("currency"));
+					depositRequisitsCol.setCellValueFactory(new PropertyValueFactory<>("requisits"));
+					depositDurationCol.setCellValueFactory(new PropertyValueFactory<>("duration"));
+					depositRateCol.setCellValueFactory(new PropertyValueFactory<>("rateValue"));
+					depositCapCol.setCellValueFactory(new PropertyValueFactory<>("cap"));
+					depositFixedCol.setCellValueFactory(new PropertyValueFactory<>("fixed"));
+					depositWithdrawCol.setCellValueFactory(new PropertyValueFactory<>("withdraw"));
+					depositEndmonthCol.setCellValueFactory(new PropertyValueFactory<>("endmonth"));
+					depositInsuredCol.setCellValueFactory(new PropertyValueFactory<>("insured"));
+
 
 				}
 			}

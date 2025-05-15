@@ -7,7 +7,6 @@ public class User {
 
 	private int id;
 
-
 	private String login;
 
 	private PersonInfo info;
